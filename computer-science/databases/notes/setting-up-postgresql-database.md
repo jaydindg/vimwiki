@@ -3,10 +3,10 @@
 # Setting up a PostgreSQL Database | Notes
 
 ## Things to think about
-1. **Setting up Needed Schemas**
+### **Setting up Needed Schemas**
   - e.g ("auth" - for users table, "public" for CRUD applied data)
   - 
-2. **Setting up Needed Roles**
+### **Setting up Needed Roles**
   - "postgres" - Default admin role with full privileges.
   - "anon" - For unauthenticated, public access (used by APIs when no user is logged in)
   - "authenticated" - For logged-in users accessing data via JWT.
@@ -21,7 +21,8 @@
   -- Other 
   CREATE ROLE {role}
   ```
-3. **Granting Permissions**
+  
+### **Granting Permissions**
   - "GRANT" is used to assign access to schemas, tables, or function.
 
   **Grant command**
@@ -32,7 +33,7 @@
   GRANT USAGE ON SCHEMA public TO authenticated;
   GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO authenticated;
   ```
-4. **(Optional): Role Switching via JWT**
+### **(Optional): Role Switching via JWT**
   - If you're using JWTs, you can configure your backend to switch roles based on claims.
   
   **e.g**
