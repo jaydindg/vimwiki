@@ -5,7 +5,7 @@
 ## Things to think about
 ### **Setting up Needed Schemas**
   - e.g ("auth" - for users table, "public" for CRUD applied data)
-  - 
+   
 ### **Setting up Needed Roles**
   - "postgres" - Default admin role with full privileges.
   - "anon" - For unauthenticated, public access (used by APIs when no user is logged in)
